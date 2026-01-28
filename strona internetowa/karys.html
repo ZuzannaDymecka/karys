@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>KARYS – Nabiał z Gorzowa Wielkopolskiego</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #f2f4f7;
+color: #333;
+}
+
+header {
+background-color: #ffffff;
+border-bottom: 3px solid #005bbb;
+padding: 20px;
+text-align: center;
+}
+
+.logo {
+height: 90px;
+}
+
+nav {
+margin-top: 15px;
+}
+
+nav a {
+margin: 0 15px;
+text-decoration: none;
+color: #005bbb;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #009933;
+}
+
+section {
+max-width: 900px;
+margin: 30px auto;
+background-color: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+color: #005bbb;
+}
+
+.products {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.product {
+border: 1px solid #ddd;
+padding: 15px;
+border-radius: 6px;
+}
+
+button {
+margin-top: 10px;
+background-color: #005bbb;
+color: white;
+border: none;
+padding: 8px 12px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #009933;
+}
+
+/* OPIS PRODUKTU – DOMYŚLNIE UKRYTY */
+.opis {
+display: none;
+margin-top: 10px;
+padding: 10px;
+background-color: #eef3f9;
+border-radius: 5px;
+font-size: 14px;
+}
+
+footer {
+background-color: #222;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo-karys.jpg" alt="Logo KARYS" class="logo">
+<h1>KARYS</h1>
+<p>Nabiał z Gorzowa Wielkopolskiego</p>
+
+<nav>
+<a href="#o-nas">O nas</a>
+<a href="#produkty">Produkty</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</header>
+
+<section id="o-nas">
+<h2>O firmie</h2>
+<p>
+Firma <strong>KARYS</strong> to lokalny producent nabiału z Gorzowa Wielkopolskiego.
+Specjalizujemy się w produkcji naturalnych wyrobów mlecznych
+tworzonych z zachowaniem tradycyjnych metod.
+</p>
+</section>
+
+<section id="produkty">
+<h2>Nasze produkty</h2>
+
+<div class="products">
+
+<div class="product">
+<h3>Mleko świeże</h3>
+<button onclick="toggleOpis('mleko')">Więcej informacji</button>
+<div id="mleko" class="opis">
+Mleko świeże bez dodatków, bogate w wapń i białko,
+idealne do codziennego spożycia.
+</div>
+</div>
+
+<div class="product">
+<h3>Ser wiejski</h3>
+<button onclick="toggleOpis('ser')">Więcej informacji</button>
+<div id="ser" class="opis">
+Tradycyjny ser twarogowy o delikatnym smaku,
+produkowany według domowych receptur.
+</div>
+</div>
+
+<div class="product">
+<h3>Jogurt naturalny</h3>
+<button onclick="toggleOpis('jogurt')">Więcej informacji</button>
+<div id="jogurt" class="opis">
+Jogurt naturalny bez cukru,
+zawierający żywe kultury bakterii.
+</div>
+</div>
+
+<div class="product">
+<h3>Masło wiejskie</h3>
+<button onclick="toggleOpis('maslo')">Więcej informacji</button>
+<div id="maslo" class="opis">
+Masło o intensywnym smaku,
+wytwarzane tradycyjną metodą.
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p><strong>KARYS</strong></p>
+<p>Gorzów Wielkopolski</p>
+<p>Telefon: 123 456 789</p>
+</section>
+
+<footer>
+<p>&copy; 2026 KARYS – projekt zaliczeniowy</p>
+</footer>
+
+<script>
+// Funkcja pokazuje lub ukrywa opis produktu
+function toggleOpis(id) {
+const opis = document.getElementById(id);
+
+if (opis.style.display === "block") {
+opis.style.display = "none";
+} else {
+opis.style.display = "block";
+}
+}
+</script>
+
+</body>
+</html>
